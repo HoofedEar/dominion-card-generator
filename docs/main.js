@@ -277,6 +277,12 @@ function initCardImageGenerator() {
                                 bigNumberScale = 0.8;
                                 ny -= (115 * 0.2) / 2;
                             }
+
+                            // Check if the cost is part of a sentence
+                            if (line.trim().split(" ").length > 1) {
+                                nx += 5; // Adjust this value as needed to center the text
+                            }
+                            
                             if (cost.length >= 2) {
                                 // special handling for overpay and variable costs
                                 let specialCost = cost.slice(-1);
